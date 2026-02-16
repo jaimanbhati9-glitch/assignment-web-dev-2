@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Event Dashboard</title>
+    <link rel="stylesheet" href="2.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <header><h1>🎯 Smart Event Dashboard</h1></header>
+        
+        <div class="dashboard-top">
+            <section class="card-panel add-section">
+                <h2>Add New Event</h2>
+                <form id="eventForm">
+                    <div class="input-box">
+                        <label>Event Title:</label>
+                        <input type="text" id="eventTitle" placeholder="Enter title..." required>
+                    </div>
+                    <div class="input-box">
+                        <label>Event Date:</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Category:</label>
+                        <select id="eventCategory">
+                            <option value="Conference">Conference</option>
+                            <option value="Social">Social</option>
+                            <option value="Workshop">Workshop</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <label>Description:</label>
+                        <textarea id="eventDescription" rows="3" placeholder="Enter description..."></textarea>
+                    </div>
+                    <button type="submit" id="addBtn" class="btn-grad">Add Event</button>
+                </form>
+            </section>
+
+            <section class="card-panel list-section">
+                <div class="list-header">
+                    <h2>My Events</h2>
+                    <div class="btn-row">
+                        <button id="clearAllBtn" class="btn-grad-alt">Clear All Events</button>
+                        <button id="addSampleBtn" class="btn-grad-alt">Add Sample Events</button>
+                    </div>
+                </div>
+                <div id="eventContainer" class="event-grid">
+                    <p class="empty-state">No events yet. Add your first event!</p>
+                </div>
+            </section>
+        </div>
+
+        <section class="card-panel demo-section">
+            <h2>DOM Manipulation Demo</h2>
+            <div class="demo-box">
+                <p><strong>innerText vs innerHTML vs textContent</strong></p>
+                <div id="demoContent" class="code-compare">
+                    <p><strong>Original HTML:</strong> &lt;strong&gt;Bold Text&lt;/strong&gt; with spaces</p>
+                    <p><strong>innerHTML:</strong> Renders HTML tags → <b>Bold Text</b> with spaces</p>
+                    <p><strong>innerText:</strong> Removes HTML, collapses spaces → Bold Text with spaces</p>
+                    <p><strong>textContent:</strong> Removes HTML, keeps spaces → &nbsp;&nbsp;Bold Text with spaces</p>
+                </div>
+                <p id="keyDisplay">You pressed: <span>None</span></p>
+            </div>
+        </section>
+    </div>
+    <script src="3.js"></script>
+</body>
+</html>
